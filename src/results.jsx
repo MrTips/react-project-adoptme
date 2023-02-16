@@ -7,14 +7,17 @@ const Results = ({ pets }) => {
         <h1>no results found</h1>
       ) : (
         pets.map((pet) => {
-          <Pet
-            animal={pet.animal}
-            key={pet.id}
-            images={pet.images}
-            name={pet.name}
-            breed={pet.breed}
-            location={`${pet.city}, ${pet.state}`}
-          />;
+          return (
+            <Pet
+              animal={pet.animal}
+              key={pet.id}
+              id={pet.id}
+              images={pet.images}
+              name={pet.name}
+              breed={pet.breed}
+              location={`${pet.city}, ${pet.state}`}
+            />
+          );
         })
       )}
     </div>
